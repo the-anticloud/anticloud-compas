@@ -1,0 +1,10 @@
+{
+  "project": "COMPAS",
+  "category": "ARCHITECTURAL_DESIGN",
+  "path": "E:\\fenta\\Downloads\\The Anticloud\\ANTICLOUD_REPOS\\ARCHITECTURAL_DESIGN\\COMPAS",
+  "status": "failed",
+  "reason": "unreadable BENCH.json: 'metrics'",
+  "files_count": null,
+  "lines_of_code": null,
+  "sha": null
+}

@@ -1,0 +1,621 @@
+{
+  "schema": "anticloud.tier-bench/1",
+  "project": "COMPAS",
+  "source": {
+    "repo_path": "E:\\fenta\\Downloads\\The Anticloud\\ANTICLOUD_REPOS\\ARCHITECTURAL_DESIGN\\COMPAS\\UPSTREAM_CLONE",
+    "git": {
+      "head": "d1142516502456e0dd3f98cd2a5691924a82de80",
+      "url": "https://github.com/compas-dev/compas",
+      "branch": "main",
+      "committed_at": "2026-09-08T16:08:01+02:00"
+    }
+  },
+  "metrics": {
+    "files_total": 772,
+    "source_files_scanned": 469,
+    "lines_of_code": 107712,
+    "languages": {
+      ".py": 494,
+      ".rst": 73,
+      ".png": 60,
+      ".txt": 54,
+      ".obj": 23,
+      ".json": 21,
+      ".jpg": 8,
+      ".stl": 7,
+      "(none)": 5,
+      ".glb": 5,
+      ".gltf": 5,
+      ".md": 4,
+      ".ply": 3,
+      ".xml": 3,
+      ".off": 2
+    }
+  },
+  "licence": {
+    "spdx": "MIT",
+    "class": "A",
+    "source_file": "LICENSE",
+    "redistribution_allowed": true
+  },
+  "dependencies": {
+    "count": 0,
+    "unique": 0,
+    "by_ecosystem": {},
+    "list": []
+  },
+  "owasp_top10": {
+    "total_findings": 68,
+    "files_with_findings": 64,
+    "severity": {
+      "high": 23,
+      "medium": 1,
+      "low": 44
+    },
+    "categories": {
+      "A01-BrokenAccessControl": {
+        "count": 0,
+        "findings": []
+      },
+      "A02-CryptographicFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A03-Injection": {
+        "count": 23,
+        "findings": [
+          {
+            "severity": "high",
+            "file": "tests/compas/donttest_api_completeness.py",
+            "line": 69,
+            "cwe": "CWE-78",
+            "snippet": "#         subprocess.call(\"sphinx-autogen -o {} {}\".format(TEMP, stub), shell=True, env=env)"
+          },
+          {
+            "severity": "high",
+            "file": "tests/compas/stubs.py",
+            "line": 45,
+            "cwe": "CWE-78",
+            "snippet": "subprocess.call(\"sphinx-autogen -o {} {}\".format(TEMP, stub), shell=True, env=env)"
+          },
+          {
+            "severity": "high",
+            "file": "tests/compas/geometry/test_curves_arc.py",
+            "line": 35,
+            "cwe": "CWE-95",
+            "snippet": "other = eval(repr(arc))"
+          },
+          {
+            "severity": "high",
+            "file": "tests/compas/geometry/test_frame.py",
+            "line": 35,
+            "cwe": "CWE-95",
+            "snippet": "other = eval(repr(frame))"
+          },
+          {
+            "severity": "high",
+            "file": "tests/compas/geometry/test_plane.py",
+            "line": 29,
+            "cwe": "CWE-95",
+            "snippet": "other = eval(repr(plane))"
+          },
+          {
+            "severity": "high",
+            "file": "tests/compas/geometry/test_point.py",
+            "line": 26,
+            "cwe": "CWE-95",
+            "snippet": "assert eval(repr(p)) == p"
+          },
+          {
+            "severity": "high",
+            "file": "tests/compas/geometry/test_pointcloud.py",
+            "line": 25,
+            "cwe": "CWE-95",
+            "snippet": "assert pointcloud == eval(repr(pointcloud))"
+          },
+          {
+            "severity": "high",
+            "file": "tests/compas/geometry/test_polygon.py",
+            "line": 30,
+            "cwe": "CWE-95",
+            "snippet": "assert polygon == eval(repr(polygon))"
+          },
+          {
+            "severity": "high",
+            "file": "tests/compas/geometry/test_quaternion.py",
+            "line": 35,
+            "cwe": "CWE-95",
+            "snippet": "other = eval(repr(quaternion))"
+          },
+          {
+            "severity": "high",
+            "file": "tests/compas/geometry/test_surfaces_cone.py",
+            "line": 35,
+            "cwe": "CWE-95",
+            "snippet": "other = eval(repr(cone))"
+          },
+          {
+            "severity": "high",
+            "file": "tests/compas/geometry/test_surfaces_cylinder.py",
+            "line": 28,
+            "cwe": "CWE-95",
+            "snippet": "other = eval(repr(cylinder))"
+          },
+          {
+            "severity": "high",
+            "file": "tests/compas/geometry/test_surfaces_plane.py",
+            "line": 35,
+            "cwe": "CWE-95",
+            "snippet": "other = eval(repr(plane))"
+          },
+          {
+            "severity": "high",
+            "file": "tests/compas/geometry/test_surfaces_sphere.py",
+            "line": 32,
+            "cwe": "CWE-95",
+            "snippet": "other = eval(repr(surf))"
+          },
+          {
+            "severity": "high",
+            "file": "tests/compas/geometry/test_surfaces_torus.py",
+            "line": 35,
+            "cwe": "CWE-95",
+            "snippet": "other = eval(repr(torus))"
+          },
+          {
+            "severity": "high",
+            "file": "tests/compas/geometry/test_vector.py",
+            "line": 26,
+            "cwe": "CWE-95",
+            "snippet": "assert eval(repr(v)) == v"
+          },
+          {
+            "severity": "high",
+            "file": "tests/compas/geometry/test_transformations/test_transformation.py",
+            "line": 156,
+            "cwe": "CWE-95",
+            "snippet": "assert R == eval(repr(R))"
+          },
+          {
+            "severity": "high",
+            "file": "tests/compas/data/test_pickle.py",
+            "line": 8,
+            "cwe": "CWE-502",
+            "snippet": "f2 = pickle.loads(s)"
+          },
+          {
+            "severity": "high",
+            "file": "tests/compas/colors/test_color.py",
+            "line": 29,
+            "cwe": "CWE-95",
+            "snippet": "assert TOL.is_allclose(eval(repr(c)), c)"
+          },
+          {
+            "severity": "high",
+            "file": "src/compas_rhino/__init__.py",
+            "line": 113,
+            "cwe": "CWE-95",
+            "snippet": "exec(content, data)"
+          },
+          {
+            "severity": "high",
+            "file": "src/compas_blender/__init__.py",
+            "line": 112,
+            "cwe": "CWE-95",
+            "snippet": "exec(content, data)"
+          },
+          {
+            "severity": "high",
+            "file": "src/compas/_os.py",
+            "line": 286,
+            "cwe": "CWE-78",
+            "snippet": "process = subprocess.Popen(args, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)"
+          },
+          {
+            "severity": "high",
+            "file": "src/compas/__init__.py",
+            "line": 284,
+            "cwe": "CWE-95",
+            "snippet": "exec(zlib.decompress(base64.b64decode(encoded)).decode().format(year))"
+          },
+          {
+            "severity": "high",
+            "file": "src/compas/utilities/ssh.py",
+            "line": 147,
+            "cwe": "CWE-78",
+            "snippet": "os.system(command)"
+          }
+        ]
+      },
+      "A04-InsecureDesign": {
+        "count": 9,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "tests/compas/geometry/test_core_transformations.py",
+            "line": 102,
+            "cwe": "CWE-",
+            "snippet": "# TODO: is this correct?"
+          },
+          {
+            "severity": "low",
+            "file": "src/compas_rhino/install_plugin.py",
+            "line": 37,
+            "cwe": "CWE-",
+            "snippet": "~/Code/compas_xxx/ui/Rhino/XXX"
+          },
+          {
+            "severity": "low",
+            "file": "src/compas_rhino/uninstall_plugin.py",
+            "line": 30,
+            "cwe": "CWE-",
+            "snippet": "python -m compas_rhino.uninstall_plugin XXX"
+          },
+          {
+            "severity": "low",
+            "file": "src/compas_rhino/geometry/brep/brep.py",
+            "line": 57,
+            "cwe": "CWE-",
+            "snippet": "# TODO: this only seems to work in ScriptEditor (AKA rhino, not GH)"
+          },
+          {
+            "severity": "low",
+            "file": "src/compas_blender/scene/curveobject.py",
+            "line": 37,
+            "cwe": "CWE-",
+            "snippet": "# TODO: add support for NurbsCurve"
+          },
+          {
+            "severity": "low",
+            "file": "src/compas/geometry/brep/edge.py",
+            "line": 259,
+            "cwe": "CWE-",
+            "snippet": "TODO: type?"
+          },
+          {
+            "severity": "low",
+            "file": "src/compas/files/ply.py",
+            "line": 478,
+            "cwe": "CWE-",
+            "snippet": "# this seems a nit of a hack"
+          },
+          {
+            "severity": "low",
+            "file": "docs/conf.py",
+            "line": 44,
+            "cwe": "CWE-",
+            "snippet": "# autodoc options"
+          },
+          {
+            "severity": "low",
+            "file": "docs/userguide/scene.py",
+            "line": 41,
+            "cwe": "CWE-",
+            "snippet": "# TODO: Make these work everywhere"
+          }
+        ]
+      },
+      "A05-SecurityMisconfiguration": {
+        "count": 1,
+        "findings": [
+          {
+            "severity": "medium",
+            "file": "src/compas/linalg.py",
+            "line": 471,
+            "cwe": "CWE-1188",
+            "snippet": "Convert NaNs and INF to numbers, default=True."
+          }
+        ]
+      },
+      "A06-VulnerableComponents": {
+        "count": 0,
+        "findings": []
+      },
+      "A07-AuthFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A08-SoftwareDataIntegrity": {
+        "count": 35,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "tests/compas/files/test_xml.py",
+            "line": 62,
+            "cwe": "CWE-319",
+            "snippet": "xml = XML.from_string(\"\"\"<?xml version=\"1.0\" encoding=\"UTF-8\"?><robot xmlns:xacro=\"http://www.ros.org/wiki/xacro\" name=\"panda\"><xacro:bamboo/></robot>\"\"\")"
+          },
+          {
+            "severity": "low",
+            "file": "tests/compas/data/test_json.py",
+            "line": 155,
+            "cwe": "CWE-319",
+            "snippet": "#     assert data['$schema'] == 'http://json-schema.org/draft-07/schema#'"
+          },
+          {
+            "severity": "low",
+            "file": "src/compas/_os.py",
+            "line": 590,
+            "cwe": "CWE-319",
+            "snippet": "# http://github.com/ActiveState/appdirs"
+          },
+          {
+            "severity": "low",
+            "file": "src/compas/__init__.py",
+            "line": 244,
+            "cwe": "CWE-319",
+            "snippet": "url = \"http://graphics.stanford.edu/pub/3Dscanrep/bunny.tar.gz\""
+          },
+          {
+            "severity": "low",
+            "file": "src/compas/utilities/azync.py",
+            "line": 12,
+            "cwe": "CWE-319",
+            "snippet": "Report: http://bugs.python.org/issue1230540"
+          },
+          {
+            "severity": "low",
+            "file": "src/compas/topology/combinatorics.py",
+            "line": 38,
+            "cwe": "CWE-319",
+            "snippet": "Available at: http://scienceblogs.com/goodmath/2007/06/28/graph-coloring-algorithms-1/."
+          },
+          {
+            "severity": "low",
+            "file": "src/compas/rpc/proxy.py",
+            "line": 83,
+            "cwe": "CWE-319",
+            "snippet": "to specify the address explicitly (``'http://127.0.0.1'``) because resolving"
+          },
+          {
+            "severity": "low",
+            "file": "src/compas/rpc/__main__.py",
+            "line": 17,
+            "cwe": "CWE-319",
+            "snippet": "server = ServerProxy(\"http://127.0.0.1:{}\".format(port))"
+          },
+          {
+            "severity": "low",
+            "file": "src/compas/geometry/bestfit.py",
+            "line": 41,
+            "cwe": "CWE-319",
+            "snippet": "Available at: http://www.ilikebigbits.com/blog/2015/3/2/plane-from-points"
+          },
+          {
+            "severity": "low",
+            "file": "src/compas/geometry/bestfit_numpy.py",
+            "line": 155,
+            "cwe": "CWE-319",
+            "snippet": "Available at: http://scipy-cookbook.readthedocs.io/items/Least_Squares_Circle.html."
+          },
+          {
+            "severity": "low",
+            "file": "src/compas/geometry/hull.py",
+            "line": 40,
+            "cwe": "CWE-319",
+            "snippet": "Available at: https://web.archive.org/web/20180106161310/http://thomasdiewald.com/blog/?p=1888"
+          },
+          {
+            "severity": "low",
+            "file": "src/compas/geometry/intersections.py",
+            "line": 440,
+            "cwe": "CWE-319",
+            "snippet": ".. [1] http://geomalgorithms.com/Pic_3-planes.gif"
+          },
+          {
+            "severity": "low",
+            "file": "src/compas/geometry/kdtree.py",
+            "line": 37,
+            "cwe": "CWE-319",
+            "snippet": "Available at: http://code.activestate.com/recipes/577497-kd-tree-for-nearest-neighbor-search-in-a-k-dimensional-space/."
+          },
+          {
+            "severity": "low",
+            "file": "src/compas/geometry/projection.py",
+            "line": 5,
+            "cwe": "CWE-319",
+            "snippet": "* http://www.lfd.uci.edu/~gohlke/code/transformations.py.html"
+          },
+          {
+            "severity": "low",
+            "file": "src/compas/geometry/quaternion.py",
+            "line": 108,
+            "cwe": "CWE-319",
+            "snippet": ".. [1] http://mathworld.wolfram.com/Quaternion.html"
+          },
+          {
+            "severity": "low",
+            "file": "src/compas/geometry/reflection.py",
+            "line": 5,
+            "cwe": "CWE-319",
+            "snippet": "* http://www.lfd.uci.edu/~gohlke/code/transformations.py.html"
+          },
+          {
+            "severity": "low",
+            "file": "src/compas/geometry/rotation.py",
+            "line": 5,
+            "cwe": "CWE-319",
+            "snippet": "* http://www.lfd.uci.edu/~gohlke/code/transformations.py.html"
+          },
+          {
+            "severity": "low",
+            "file": "src/compas/geometry/scale.py",
+            "line": 5,
+            "cwe": "CWE-319",
+            "snippet": "* http://www.lfd.uci.edu/~gohlke/code/transformations.py.html"
+          },
+          {
+            "severity": "low",
+            "file": "src/compas/geometry/shear.py",
+            "line": 5,
+            "cwe": "CWE-319",
+            "snippet": "* http://www.lfd.uci.edu/~gohlke/code/transformations.py.html"
+          },
+          {
+            "severity": "low",
+            "file": "src/compas/geometry/transformation.py",
+            "line": 5,
+            "cwe": "CWE-319",
+            "snippet": "* http://www.lfd.uci.edu/~gohlke/code/transformations.py.html"
+          },
+          {
+            "severity": "low",
+            "file": "src/compas/geometry/translation.py",
+            "line": 5,
+            "cwe": "CWE-319",
+            "snippet": "* http://www.lfd.uci.edu/~gohlke/code/transformations.py.html"
+          },
+          {
+            "severity": "low",
+            "file": "src/compas/geometry/_core/distance.py",
+            "line": 339,
+            "cwe": "CWE-319",
+            "snippet": "Available at: http://mathinsight.org/distance_point_plane."
+          },
+          {
+            "severity": "low",
+            "file": "src/compas/geometry/_core/quaternions.py",
+            "line": 29,
+            "cwe": "CWE-319",
+            "snippet": "* Quaternion Norm: http://mathworld.wolfram.com/QuaternionNorm.html"
+          },
+          {
+            "severity": "low",
+            "file": "src/compas/geometry/_core/size.py",
+            "line": 179,
+            "cwe": "CWE-319",
+            "snippet": "Available at: http://wwwf.imperial.ac.uk/~rn/centroid.pdf"
+          },
+          {
+            "severity": "low",
+            "file": "src/compas/geometry/_core/_algebra.py",
+            "line": 1484,
+            "cwe": "CWE-319",
+            "snippet": "Available at: http://www.gregslabaugh.net/publications/euler.pdf"
+          }
+        ]
+      },
+      "A09-LoggingMonitoringFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A10-SSRF": {
+        "count": 0,
+        "findings": []
+      }
+    }
+  },
+  "owasp_llm_top10": {
+    "total_findings": 3,
+    "files_with_findings": 3,
+    "severity": {
+      "high": 2,
+      "medium": 0,
+      "low": 1
+    },
+    "categories": {
+      "LLM01-PromptInjection": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM02-SensitiveInfoDisclosure": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM03-SupplyChain": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM04-DataPoisoning": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM05-ImproperOutputHandling": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM06-ExcessiveAgency": {
+        "count": 2,
+        "findings": [
+          {
+            "severity": "high",
+            "file": "src/compas_blender/objects.py",
+            "line": 28,
+            "cwe": "CWE-862",
+            "snippet": "bpy.ops.object.delete(use_global=True, confirm=False)"
+          },
+          {
+            "severity": "high",
+            "file": "src/compas_blender/__init__.py",
+            "line": 52,
+            "cwe": "CWE-862",
+            "snippet": "bpy.ops.object.delete(use_global=True, confirm=False)"
+          }
+        ]
+      },
+      "LLM07-SystemPromptLeak": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM08-VectorEmbeddingWeaknesses": {
+        "count": 1,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "src/compas/colors/color.py",
+            "line": 80,
+            "cwe": "CWE-",
+            "snippet": "Luma and chroma components, with chroma defined by the blue and red projections."
+          }
+        ]
+      },
+      "LLM09-Misinformation": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM10-UnboundedConsumption": {
+        "count": 0,
+        "findings": []
+      }
+    }
+  },
+  "sbom": {
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.5",
+    "serialNumber": "urn:uuid:8cf4dd07-5479-5858-8b35-31f7566f189a",
+    "version": 1,
+    "metadata": {
+      "timestamp": "2026-10-06T07:02:29Z",
+      "component": {
+        "type": "application",
+        "name": "COMPAS",
+        "version": "d11425165024",
+        "bom-ref": "pkg:generic/anticloud/COMPAS@d11425165024",
+        "purl": "pkg:generic/anticloud/COMPAS@d11425165024",
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT"
+            }
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "anticloud:source-commit",
+          "value": "d1142516502456e0dd3f98cd2a5691924a82de80"
+        },
+        {
+          "name": "anticloud:source-url",
+          "value": "https://github.com/compas-dev/compas"
+        },
+        {
+          "name": "anticloud:tier",
+          "value": "tier-agent"
+        }
+      ]
+    },
+    "components": []
+  },
+  "elapsed_seconds": 51.94
+}

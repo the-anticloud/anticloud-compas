@@ -1,0 +1,16 @@
+{
+ "framework": "07_ISO_27001",
+ "title": "ISO/IEC 27001:2022 Annex A controls",
+ "project": "COMPAS",
+ "basis": [
+  {
+   "check": "14_iso_27001",
+   "status": "PASS",
+   "observed": "{\"authority\": \"ISO/IEC\", \"control_ids\": [\"5.1.1\", \"5.1.2\", \""
+  }
+ ],
+ "verdict": "CONTROLS EVIDENCED \u2014 all basis checks PASS",
+ "pax_provenance": "Run ID loiskleinner/pax-benchmark-runner v3, 2026-10-02, Kaggle T4 x2 (2x 16GB VRAM), Ubuntu 22.04, Python 3.12. These are PAX L5 Narrow L2 General 27B model-level results \u2014 shared model component, not this project's verdict.",
+ "bench_sha3": "159aa6bd9dcb1be92eed4ff4b5acaa044f27c626ef12bd8f18b98808556e5d99",
+ "register_sha3": "ba1b12e7a8b7d2f7aa5a8a560329e8e8ab0e674577228af72fa6a0b3fa2d7883"
+}

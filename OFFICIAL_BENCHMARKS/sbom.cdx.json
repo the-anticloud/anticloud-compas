@@ -1,0 +1,38 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:8cf4dd07-5479-5858-8b35-31f7566f189a",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-06T07:02:29Z",
+    "component": {
+      "type": "application",
+      "name": "COMPAS",
+      "version": "d11425165024",
+      "bom-ref": "pkg:generic/anticloud/COMPAS@d11425165024",
+      "purl": "pkg:generic/anticloud/COMPAS@d11425165024",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "anticloud:source-commit",
+        "value": "d1142516502456e0dd3f98cd2a5691924a82de80"
+      },
+      {
+        "name": "anticloud:source-url",
+        "value": "https://github.com/compas-dev/compas"
+      },
+      {
+        "name": "anticloud:tier",
+        "value": "tier-agent"
+      }
+    ]
+  },
+  "components": []
+}
